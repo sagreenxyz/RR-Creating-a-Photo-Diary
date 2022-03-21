@@ -1,5 +1,6 @@
-import { activeKoala, renderKoalaList } from './index.js';
-import { koalas } from './koalas.js'
+import { activeKoala } from './index.js';
+import { koalas } from './koalas.js';
+import { renderKoalaList } from './renderKoalaList.js'
 
 // Called once when the page loads, and again every time a koala is selected
 export let render = () => {
