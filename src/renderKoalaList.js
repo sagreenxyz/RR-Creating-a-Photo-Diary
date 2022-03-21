@@ -1,4 +1,4 @@
-import { renderKoalaCard } from './index.js';
+import { renderKoalaCard } from './renderKoalaCard.js';
 
 // Renders a list of koalas
 export let renderKoalaList = koalas => {

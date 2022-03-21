@@ -2,33 +2,15 @@ import { koalas } from './koalas.js';
 import { selectKoala } from './selectKoala.js';
 import { render } from './render.js';
 import { renderKoalaList } from './renderKoalaList.js'
-
+import { renderKoalaCard } from './renderKoalaCard.js';
 export let activeKoala = null
 
 
 
-// Renders a card to display a single koala
-export let renderKoalaCard = koala => {
-    let koalaCard = document.createElement('div')
-    koalaCard.setAttribute('class', 'item')
-    koalaCard.style.cursor = 'pointer';
-    koalaCard.addEventListener('click', () => {
-        selectKoala(koala)
-    })
 
-    let koalaImage = renderKoalaCardImage(koala)
-    let koalaContent = renderKoalaCardContent(koala)
-
-    koalaCard.append(
-        koalaImage,
-        koalaContent
-    )
-
-    return koalaCard
-}
 
 // Renders the image of a koala card
-let renderKoalaCardImage = koala => {
+export let renderKoalaCardImage = koala => {
     let imageContainer = document.createElement('div')
     let koalaImage = document.createElement('img')
 
@@ -42,7 +24,7 @@ let renderKoalaCardImage = koala => {
 }
 
 // Renders the content of a koala card (their name and description)
-let renderKoalaCardContent = koala => {
+export let renderKoalaCardContent = koala => {
     let koalaContent = document.createElement('div')
     koalaContent.setAttribute('class', 'content')
 
