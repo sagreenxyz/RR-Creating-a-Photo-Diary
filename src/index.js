@@ -7,22 +7,6 @@ export let activeKoala = null
 
 
 
-
-
-// Renders the image of a koala card
-export let renderKoalaCardImage = koala => {
-    let imageContainer = document.createElement('div')
-    let koalaImage = document.createElement('img')
-
-    imageContainer.setAttribute('class', 'image')
-
-    koalaImage.setAttribute('src', koala.imageURL)
-
-    imageContainer.append(koalaImage)
-
-    return imageContainer
-}
-
 // Renders the content of a koala card (their name and description)
 export let renderKoalaCardContent = koala => {
     let koalaContent = document.createElement('div')
