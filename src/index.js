@@ -1,25 +1,11 @@
 import { koalas } from './koalas.js';
 import { selectKoala } from './selectKoala.js';
-let activeKoala = null
+import { render } from './render.js';
 
-
-
-// Called once when the page loads, and again every time a koala is selected
-let render = () => {
-    let oldPage=  document.querySelector('.koala-container')
-    let newPage;
-    if(activeKoala){
-        newPage = renderActiveKoala(activeKoala)
-    } else {
-        newPage = renderKoalaList(koalas)
-    }
-    newPage.classList.add('koala-container')
-    oldPage.replaceWith(newPage)
-}
-
+export let activeKoala = null
 
 // Renders a list of koalas
-let renderKoalaList = koalas => {
+export let renderKoalaList = koalas => {
     let koalaContainer = document.createElement('div')
 
     koalaContainer.setAttribute('class', 'ui items')
